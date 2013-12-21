@@ -1,0 +1,53 @@
+#scaffold-table {
+  width: 100%;
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+#scaffold-table th {  
+  font-weight:bold;
+  background:#EEE;
+  border:1px solid #CCC;
+  padding: 10px;
+  text-align: center;
+  vertical-align: middle;
+}
+#scaffold-table td {
+  border: 1px solid #CCC;
+  padding: 20px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+#scaffold-table a.scaffold-btn-show,
+#scaffold-table a.scaffold-btn-delete,
+#scaffold-table a.scaffold-btn-edit {
+  color: #000;
+  width: 70px;
+  font-weight: bold;
+  padding:10px;
+  border:1px solid #CCC;
+  border-bottom:3px solid #EEE;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-align: center;
+  text-decoration: none;
+}
+#scaffold-table a.scaffold-btn-edit:hover {
+  color: #FFF;
+  background: #FF9900;
+  border-color: #FF9900;
+  border-bottom-color: #FF0066;
+}
+#scaffold-table a.scaffold-btn-delete:hover {
+  color: #FFF;
+  background: #FF0099;
+  border-color: #FF0099;
+  border-bottom-color: #FF0066;
+}
+#scaffold-table a.scaffold-btn-show:hover {
+  color: #FFF;
+  background: #0099FF;
+  border-color: #0099FF;
+  border-bottom-color: #0066FF;
+}

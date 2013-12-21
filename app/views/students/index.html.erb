@@ -1,0 +1,29 @@
+<h1>Listing students</h1>
+
+<table id ="scaffold-table">
+  <thead>
+    <tr>
+	  <th>id</th>
+      <th>Student</th>
+      <th>Name</th>
+      <th>Manager...</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @students.each do |student| %>
+      <tr>
+      	<td><%= student.id %></td>
+        <td><%= student.student_id %></td>
+        <td><%= student.name %></td>
+        <td>
+        	<%= link_to 'Show', 'javascript:void(0)', :data_id => student.id, :class => 'scaffold-btn-show' %>
+	      	<%= link_to 'Edit', edit_student_path(student), :class => 'scaffold-btn-edit' %>
+	      	<%= link_to 'Destroy', student, method: :delete, data: { confirm: 'Are you sure?' }, :class => 'scaffold-btn-delete' %></td>
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+<div id="modal" title=""></div>
+<%= link_to 'New Student', new_student_path %>

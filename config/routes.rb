@@ -1,4 +1,10 @@
 KikanSystem01::Application.routes.draw do
+  resources :posts
+
+  resources :accounts
+
+  resources :students
+
   get "welcome/index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
