@@ -1,11 +1,3 @@
 language: ruby
 rvm:
 - 2.0.0
-deploy:
-  provider: heroku
-  api_key:
-    secure: YmtVkB+4VFP5ZQWW/w3Ico+/Wa00Q/vUR2B2B24yhZ8tBwNsITPZCFAIYI//uC1Q7OqQ3dCqEeQl5rpaBVR9nfeU0vWd1Lk/cwUbtEngr5Z4EYxUY7XKHm/DkT5W9x90Sq4LnAF8qH4ib1zl6DQeJ8Yj7NY2YdGVxUqqJENAQJs=
-  app: infinite-beyond-5697
-  on:
-    repo: ychubachi/kikan_system_01
-  run: "rake db:migrate"
