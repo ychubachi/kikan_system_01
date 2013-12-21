@@ -1,6 +1,11 @@
 language: ruby
 rvm:
 - 2.0.0
+before_script:
+- psql -c "create role firstrbpyar with password 'firstrbpyar' login createdb;" -U postgres
+script:
+- bundle exec rake db:drop db:create db:migrate
+- bundle exec rake
 deploy:
   provider: heroku
   api_key:
