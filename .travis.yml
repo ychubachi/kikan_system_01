@@ -10,6 +10,7 @@ deploy:
   provider: heroku
   api_key:
     secure: wNnSzk+YypeS9mABnN4WfynCoefnx/oeRvq1z0c5/eM5jIM3HRZrLI118xY25wB1gK97sgCAGZcTfC8XqNlRHraimuKJ4oI/O7DeeTj+uXlc3Et5LMraNoyvnCXNb96EFLBtX7wacODnFMupvwEX63X+jQN1+gEQkEZIeiTBf0Q=
+  run: "rake db:migrate"
   app: firstrbpyar
   on:
     repo: pyar6329/kikan_system_01
