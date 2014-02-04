@@ -1,11 +1,16 @@
 language: ruby
 rvm:
 - 2.0.0
+before_script:
+- psql -c "create role firstrbpyar with password 'firstrbpyar' login createdb;" -U
+  postgres
+script:
+- bundle exec rake db:drop db:create db:migrate
+- bundle exec rake
 deploy:
   provider: heroku
   api_key:
-    secure: YmtVkB+4VFP5ZQWW/w3Ico+/Wa00Q/vUR2B2B24yhZ8tBwNsITPZCFAIYI//uC1Q7OqQ3dCqEeQl5rpaBVR9nfeU0vWd1Lk/cwUbtEngr5Z4EYxUY7XKHm/DkT5W9x90Sq4LnAF8qH4ib1zl6DQeJ8Yj7NY2YdGVxUqqJENAQJs=
-  app: infinite-beyond-5697
+    secure: i10FXTWrPu76ocJyUxsJ7ukYUeL7UCGOnTL8uMuxeRSRU24L+xixIAi+CHXxv/MqXRHj8srXM18n4j80QgP1Sv2QNJg8VMCSrOAN8gMMOr9vB2+5PdkA136WvGb+YlfHcdCTfC4RtJrfjLTuXhMl6/9XIaVNrAMZ8obnHH+ca5k=
+  app: kikansystem01
   on:
-    repo: ychubachi/kikan_system_01
-  run: "rake db:migrate"
+    repo: pyar6329/kikan_system_01
